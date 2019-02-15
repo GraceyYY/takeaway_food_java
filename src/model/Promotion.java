@@ -8,7 +8,7 @@ public class Promotion {
         this.type = type;
         this.items = items;
     }
-    
+
     public String getType() {
         return this.type;
     }
