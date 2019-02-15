@@ -11,7 +11,6 @@ public class Dish {
         this.name = name;
         this.id = id;
         this.price = price;
-        this.num = num;
     }
 
     public String getName() {
