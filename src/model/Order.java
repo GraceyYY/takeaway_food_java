@@ -5,9 +5,12 @@ import java.util.List;
 
 public class Order {
     private List<Dish> order;
+    private double fullPrice;
 
-    public Order() {
+    public Order(String[] orders) {
         this.order = new ArrayList<Dish>();
+        processOrder(orders);
+        calculatePrice();
     }
 
     private void processOrder(String[] orders) {
@@ -22,11 +25,26 @@ public class Order {
         }
     }
 
+    private void calculatePrice() {
+        for (int i = 0; i < this.order.size(); i++) {
+            Dish dish = this.order.get(i);
+            this.fullPrice += dish.getPrice() * dish.getNum();
+        }
+    }
+
     public List<Dish> getOrder() {
         return this.order;
     }
 
     public void setOrder(List<Dish> order) {
         this.order = order;
+    }
+
+    public double getFullPrice() {
+        return this.fullPrice;
+    }
+
+    public void setFullPrice(double fullPrice) {
+        this.fullPrice = fullPrice;
     }
 }
