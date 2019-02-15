@@ -13,6 +13,6 @@ public class DeductOverFullPrice extends Promotion {
     }
 
     private double deductOverFullPrice(double fullPrice, int deduction, int target) {
-        return fullPrice > target ? (fullPrice-deduction) : 0;
+        return fullPrice > target ? (deduction) : 0;
     }
 }
