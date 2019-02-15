@@ -1,4 +1,7 @@
-package model;
+package service;
+
+import model.Dish;
+import model.Menu;
 
 import java.util.ArrayList;
 import java.util.List;
