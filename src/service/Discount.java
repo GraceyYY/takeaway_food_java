@@ -13,7 +13,7 @@ public class Discount {
         double discountOver30 = deductOver30.discount(order);
         double discountHalfPrice = halfPrice.discount(order);
         if ( discountOver30 == 0 && discountHalfPrice == 0) {
-            this.bestPromotion = "none";
+            this.bestPromotion = "无";
             this.discount = 0;
         } else if (discountOver30 >= discountHalfPrice) {
             this.bestPromotion = deductOver30.getType();
@@ -24,4 +24,19 @@ public class Discount {
         }
     }
 
+    public String getBestPromotion() {
+        return this.bestPromotion;
+    }
+
+    public void setBestPromotion(String bestPromotion) {
+        this.bestPromotion = bestPromotion;
+    }
+
+    public double getDiscount() {
+        return this.discount;
+    }
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
 }
