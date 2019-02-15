@@ -5,11 +5,13 @@ public class Dish {
     private String name;
     private String id;
     private double price;
+    private int num;
 
     public Dish(String name, String id, double price) {
         this.name = name;
         this.id = id;
         this.price = price;
+        this.num = num;
     }
 
     public String getName() {
@@ -34,6 +36,14 @@ public class Dish {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public int getNum() {
+        return this.num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
     }
 
 }
