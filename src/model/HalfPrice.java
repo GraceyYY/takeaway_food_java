@@ -6,6 +6,7 @@ import java.util.List;
 
 public class HalfPrice extends Promotion {
     public HalfPrice(String type, String items) {
+
         super(type, items);
     }
 
@@ -15,7 +16,7 @@ public class HalfPrice extends Promotion {
         double discount = 0;
         for (int i = 0; i < ordered.size(); i++) {
             Dish dish = ordered.get(i);
-            if (this.getItems().indexOf(dish.getId()) >= 0) {
+            if (this.items.indexOf(dish.getId()) >= 0) {
                 discount += dish.getPrice() / 2 * dish.getNum();
             }
         }
