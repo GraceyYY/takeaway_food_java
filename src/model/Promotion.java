@@ -2,7 +2,7 @@ package model;
 
 import service.Order;
 
-public class Promotion {
+public abstract class Promotion {
     private String type;
     protected String items;
 
@@ -11,10 +11,7 @@ public class Promotion {
         this.items = items;
     }
 
-    public double discount(Order order) {
-
-        return 0;
-    }
+    public abstract double discount(Order order);
 
     public String getType() {
 
